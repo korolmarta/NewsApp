@@ -110,7 +110,7 @@ extension DiscoverViewController: UISearchBarDelegate {
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        discoverViewModel.loadData(with: searchBar.text?.lowercased()) { [weak self] in
+        discoverViewModel.loadData(with: searchBar.text?.requestFormat) { [weak self] in
             self?.reloadTable()
         }
         endTyping()
