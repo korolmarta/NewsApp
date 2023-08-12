@@ -15,14 +15,38 @@ final class NetworkService {
     private let globalAPI = "https://newsapi.org/v2/"
     private let defaultQuery = "apple"
     private let defaultSortBy = "publishedAt"
+    private let defaultCountry = Country.us.value
     /// Replace empty string with your API Key
     /// To get API Key visit https://newsapi.org/
     private let yourApiKey = ""
     
+    var country: Country = .none
+    var category: Category = .none
+    
     private init() {}
     
     private func query(_ query: String?) -> String {
-        "everything?q=\(query ?? defaultQuery)"
+        var topHeadlines = "top-headlines?"
+        guard let query = query else {
+            return topHeadlines + filter
+        }
+        topHeadlines += "q=\(query)"
+        if country != .none {
+            topHeadlines += "&country=\(country.value)"
+        }
+        if category != .none {
+            topHeadlines += "&category=\(category.value)"
+        }
+        return topHeadlines
+    }
+    
+    private var filter: String {
+        var filter = "country="
+        filter += country != .none ? country.value : defaultCountry
+        if category != .none {
+            filter += "&category=\(category.value)"
+        }
+        return filter
     }
     
     private func page(_ page: Int, size: Int) -> String {

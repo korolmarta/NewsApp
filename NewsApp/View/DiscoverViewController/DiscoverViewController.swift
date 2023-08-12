@@ -25,6 +25,8 @@ final class DiscoverViewController: BaseNewsViewController {
     }
 
     @IBAction func filterButtonPressed(_ sender: Any) {
+        let filterVC = FilterViewController()
+        navigationController?.pushViewController(filterVC, animated: true)
     }
     
     override func setupTableView() {

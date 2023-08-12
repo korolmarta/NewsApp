@@ -10,8 +10,16 @@
 		86AD4D08E7E718A5501FFD8F /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235A9B7B19D6DEEFA0820918 /* Pods_NewsApp.framework */; };
 		B12244BD2A87764300950105 /* BaseNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12244BC2A87764300950105 /* BaseNewsViewController.swift */; };
 		B12244C02A87805000950105 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12244BF2A87805000950105 /* TableViewModel.swift */; };
+		B12244C72A87C26C00950105 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12244C52A87C26C00950105 /* FilterViewController.swift */; };
+		B12244CC2A87C54C00950105 /* FilterItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12244CA2A87C54C00950105 /* FilterItemCell.swift */; };
+		B12244CD2A87C54C00950105 /* FilterItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B12244CB2A87C54C00950105 /* FilterItemCell.xib */; };
+		B12244CF2A87C58F00950105 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12244CE2A87C58F00950105 /* FilterViewModel.swift */; };
 		B12244D32A87CE0900950105 /* Categoty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12244D22A87CE0900950105 /* Categoty.swift */; };
 		B12244D52A87CE3700950105 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12244D42A87CE3700950105 /* Country.swift */; };
+		B12244D72A87DC0F00950105 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12244D62A87DC0F00950105 /* PickerViewController.swift */; };
+		B12244DB2A87DD2200950105 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12244D92A87DD2200950105 /* OptionCell.swift */; };
+		B12244DC2A87DD2200950105 /* OptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B12244DA2A87DD2200950105 /* OptionCell.xib */; };
+		B12244DE2A87DF6200950105 /* PickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12244DD2A87DF6200950105 /* PickerViewModel.swift */; };
 		B12244E02A8804B100950105 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12244DF2A8804B100950105 /* Filter.swift */; };
 		B13D03502A8524D2004ED2D7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D034F2A8524D2004ED2D7 /* WebViewController.swift */; };
 		B146D3A52A86E03B00909EDD /* SourceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B146D3A12A86E03B00909EDD /* SourceEntity.swift */; };
@@ -46,8 +54,16 @@
 		42742BBC9D62BAABB167A75B /* Pods-NewsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.debug.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B12244BC2A87764300950105 /* BaseNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNewsViewController.swift; sourceTree = "<group>"; };
 		B12244BF2A87805000950105 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		B12244C52A87C26C00950105 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		B12244CA2A87C54C00950105 /* FilterItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemCell.swift; sourceTree = "<group>"; };
+		B12244CB2A87C54C00950105 /* FilterItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterItemCell.xib; sourceTree = "<group>"; };
+		B12244CE2A87C58F00950105 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		B12244D22A87CE0900950105 /* Categoty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categoty.swift; sourceTree = "<group>"; };
 		B12244D42A87CE3700950105 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		B12244D62A87DC0F00950105 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		B12244D92A87DD2200950105 /* OptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
+		B12244DA2A87DD2200950105 /* OptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionCell.xib; sourceTree = "<group>"; };
+		B12244DD2A87DF6200950105 /* PickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewModel.swift; sourceTree = "<group>"; };
 		B12244DF2A8804B100950105 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		B13D034F2A8524D2004ED2D7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B146D3A12A86E03B00909EDD /* SourceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEntity.swift; sourceTree = "<group>"; };
@@ -115,6 +131,24 @@
 			path = TabBarController;
 			sourceTree = "<group>";
 		};
+		B12244C42A87C22100950105 /* FilterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B12244C52A87C26C00950105 /* FilterViewController.swift */,
+				B12244D62A87DC0F00950105 /* PickerViewController.swift */,
+			);
+			path = FilterViewController;
+			sourceTree = "<group>";
+		};
+		B12244C92A87C4ED00950105 /* FilterItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				B12244CA2A87C54C00950105 /* FilterItemCell.swift */,
+				B12244CB2A87C54C00950105 /* FilterItemCell.xib */,
+			);
+			path = FilterItemCell;
+			sourceTree = "<group>";
+		};
 		B12244D02A87C5B100950105 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +165,15 @@
 				B12244DF2A8804B100950105 /* Filter.swift */,
 			);
 			path = Filters;
+			sourceTree = "<group>";
+		};
+		B12244D82A87DCFB00950105 /* OptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				B12244D92A87DD2200950105 /* OptionCell.swift */,
+				B12244DA2A87DD2200950105 /* OptionCell.xib */,
+			);
+			path = OptionCell;
 			sourceTree = "<group>";
 		};
 		B13266DE2A8657F700E2EA1F /* LoadingCell */ = {
@@ -161,6 +204,8 @@
 		B1ABCB9F2A86BF82009A8A73 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				B12244C92A87C4ED00950105 /* FilterItemCell */,
+				B12244D82A87DCFB00950105 /* OptionCell */,
 				B13266DE2A8657F700E2EA1F /* LoadingCell */,
 				B1B5EC322A83D08100A4C779 /* NewsItemCell */,
 			);
@@ -226,10 +271,12 @@
 		B1B5EC232A83B5BA00A4C779 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B1ABCB932A8696F6009A8A73 /* NewsItemViewModel.swift */,
 				B12244D02A87C5B100950105 /* Protocol */,
 				B1ABCB8F2A868097009A8A73 /* DiscoverViewModel.swift */,
+				B12244CE2A87C58F00950105 /* FilterViewModel.swift */,
+				B1ABCB932A8696F6009A8A73 /* NewsItemViewModel.swift */,
 				B1ABCB9D2A86BF70009A8A73 /* SavedNewsViewModel.swift */,
+				B12244DD2A87DF6200950105 /* PickerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -242,6 +289,7 @@
 				B12244C12A87820500950105 /* TabBarController */,
 				B12244BE2A87801E00950105 /* BaseNewsViewController */,
 				B1B5EC2D2A83C01F00A4C779 /* DiscoverViewController */,
+				B12244C42A87C22100950105 /* FilterViewController */,
 				B1ABCB962A86BB5D009A8A73 /* SavedNewsViewController */,
 				B1ABCB952A86BB21009A8A73 /* WebViewController */,
 			);
@@ -352,9 +400,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B5EC1B2A83B41000A4C779 /* LaunchScreen.storyboard in Resources */,
+				B12244DC2A87DD2200950105 /* OptionCell.xib in Resources */,
 				B1E81EBA2A83E39400B05F76 /* NewsItemCell.xib in Resources */,
 				B1B5EC182A83B41000A4C779 /* Assets.xcassets in Resources */,
 				B1ABCB862A865951009A8A73 /* LoadingCell.xib in Resources */,
+				B12244CD2A87C54C00950105 /* FilterItemCell.xib in Resources */,
 				B1B5EC2C2A83C01400A4C779 /* DiscoverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,14 +461,17 @@
 				B1ABCB882A867661009A8A73 /* NetworkService.swift in Sources */,
 				B12244E02A8804B100950105 /* Filter.swift in Sources */,
 				B1ABCB942A8696F6009A8A73 /* NewsItemViewModel.swift in Sources */,
+				B12244CF2A87C58F00950105 /* FilterViewModel.swift in Sources */,
 				B1E81EBC2A83ED0200B05F76 /* Article.swift in Sources */,
 				B12244BD2A87764300950105 /* BaseNewsViewController.swift in Sources */,
 				B1B5EC0C2A83B40F00A4C779 /* AppDelegate.swift in Sources */,
 				B1E81EB92A83E39400B05F76 /* NewsItemCell.swift in Sources */,
 				B1ABCB8C2A867812009A8A73 /* Response.swift in Sources */,
+				B12244C72A87C26C00950105 /* FilterViewController.swift in Sources */,
 				B1ABCB8A2A8677EE009A8A73 /* Source.swift in Sources */,
 				B12244D52A87CE3700950105 /* Country.swift in Sources */,
 				B1ABCB9E2A86BF70009A8A73 /* SavedNewsViewModel.swift in Sources */,
+				B12244DE2A87DF6200950105 /* PickerViewModel.swift in Sources */,
 				B12244D32A87CE0900950105 /* Categoty.swift in Sources */,
 				B1ABCB9C2A86BC6D009A8A73 /* SavedNewsViewController.swift in Sources */,
 				B146D3A52A86E03B00909EDD /* SourceEntity.swift in Sources */,
@@ -426,12 +479,15 @@
 				B1B5EC282A83BED400A4C779 /* TabBarController.swift in Sources */,
 				B12244C02A87805000950105 /* TableViewModel.swift in Sources */,
 				B1B5EC2B2A83C01400A4C779 /* DiscoverViewController.swift in Sources */,
+				B12244DB2A87DD2200950105 /* OptionCell.swift in Sources */,
+				B12244CC2A87C54C00950105 /* FilterItemCell.swift in Sources */,
 				B1ABCB852A865951009A8A73 /* LoadingCell.swift in Sources */,
 				B1ABCB922A8686FC009A8A73 /* UIViewController+utils.swift in Sources */,
 				B1ABCB902A868097009A8A73 /* DiscoverViewModel.swift in Sources */,
 				B1B5EC0E2A83B40F00A4C779 /* SceneDelegate.swift in Sources */,
 				B1ABCBA12A86D591009A8A73 /* CoreDataService.swift in Sources */,
 				B146D3A72A86E03B00909EDD /* ArticleEntity.swift in Sources */,
+				B12244D72A87DC0F00950105 /* PickerViewController.swift in Sources */,
 				B13D03502A8524D2004ED2D7 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
