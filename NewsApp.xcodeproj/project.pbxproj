@@ -11,6 +11,8 @@
 		B12244BD2A87764300950105 /* BaseNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12244BC2A87764300950105 /* BaseNewsViewController.swift */; };
 		B12244C02A87805000950105 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12244BF2A87805000950105 /* TableViewModel.swift */; };
 		B13D03502A8524D2004ED2D7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D034F2A8524D2004ED2D7 /* WebViewController.swift */; };
+		B146D3A52A86E03B00909EDD /* SourceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B146D3A12A86E03B00909EDD /* SourceEntity.swift */; };
+		B146D3A72A86E03B00909EDD /* ArticleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B146D3A32A86E03B00909EDD /* ArticleEntity.swift */; };
 		B1ABCB852A865951009A8A73 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ABCB832A865951009A8A73 /* LoadingCell.swift */; };
 		B1ABCB862A865951009A8A73 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1ABCB842A865951009A8A73 /* LoadingCell.xib */; };
 		B1ABCB882A867661009A8A73 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ABCB872A867661009A8A73 /* NetworkService.swift */; };
@@ -39,6 +41,8 @@
 		B12244BC2A87764300950105 /* BaseNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNewsViewController.swift; sourceTree = "<group>"; };
 		B12244BF2A87805000950105 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		B13D034F2A8524D2004ED2D7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B146D3A12A86E03B00909EDD /* SourceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEntity.swift; sourceTree = "<group>"; };
+		B146D3A32A86E03B00909EDD /* ArticleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleEntity.swift; sourceTree = "<group>"; };
 		B1ABCB832A865951009A8A73 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		B1ABCB842A865951009A8A73 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		B1ABCB872A867661009A8A73 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -125,6 +129,15 @@
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
+		B1ABCBA22A86DC11009A8A73 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B146D3A32A86E03B00909EDD /* ArticleEntity.swift */,
+				B146D3A12A86E03B00909EDD /* SourceEntity.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		B1B5EBFF2A83B40F00A4C779 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +176,7 @@
 		B1B5EC222A83B5AF00A4C779 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B1ABCBA22A86DC11009A8A73 /* CoreData */,
 				B1E81EBB2A83ED0200B05F76 /* Article.swift */,
 				B1ABCB892A8677EE009A8A73 /* Source.swift */,
 				B1ABCB8B2A867812009A8A73 /* Response.swift */,
@@ -360,6 +374,7 @@
 				B1E81EB92A83E39400B05F76 /* NewsItemCell.swift in Sources */,
 				B1ABCB8C2A867812009A8A73 /* Response.swift in Sources */,
 				B1ABCB8A2A8677EE009A8A73 /* Source.swift in Sources */,
+				B146D3A52A86E03B00909EDD /* SourceEntity.swift in Sources */,
 				B1B5EC162A83B40F00A4C779 /* NewsApp.xcdatamodeld in Sources */,
 				B1B5EC282A83BED400A4C779 /* TabBarController.swift in Sources */,
 				B12244C02A87805000950105 /* TableViewModel.swift in Sources */,
@@ -368,6 +383,7 @@
 				B1ABCB922A8686FC009A8A73 /* UIViewController+utils.swift in Sources */,
 				B1ABCB902A868097009A8A73 /* DiscoverViewModel.swift in Sources */,
 				B1B5EC0E2A83B40F00A4C779 /* SceneDelegate.swift in Sources */,
+				B146D3A72A86E03B00909EDD /* ArticleEntity.swift in Sources */,
 				B13D03502A8524D2004ED2D7 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
