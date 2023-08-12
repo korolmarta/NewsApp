@@ -15,7 +15,7 @@ final class SavedNewsViewController: BaseNewsViewController {
         return (viewModel as? SavedNewsViewModel) ?? SavedNewsViewModel()
     }
     
-    let tableView = UITableView()
+    private let tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

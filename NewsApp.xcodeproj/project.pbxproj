@@ -115,6 +115,14 @@
 			path = TabBarController;
 			sourceTree = "<group>";
 		};
+		B12244D02A87C5B100950105 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B12244BF2A87805000950105 /* TableViewModel.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		B12244D12A87CDE400950105 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,8 +226,8 @@
 		B1B5EC232A83B5BA00A4C779 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B12244BF2A87805000950105 /* TableViewModel.swift */,
 				B1ABCB932A8696F6009A8A73 /* NewsItemViewModel.swift */,
+				B12244D02A87C5B100950105 /* Protocol */,
 				B1ABCB8F2A868097009A8A73 /* DiscoverViewModel.swift */,
 				B1ABCB9D2A86BF70009A8A73 /* SavedNewsViewModel.swift */,
 			);

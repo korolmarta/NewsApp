@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiscoverViewController" customModule="NewsApp" customModuleProvider="target">
             <connections>
+                <outlet property="filterButton" destination="ixj-f2-yR2" id="QYA-Mx-eS2"/>
                 <outlet property="searchBar" destination="dGU-zY-H8h" id="W43-ld-Ffc"/>
                 <outlet property="tableView" destination="Tgl-4L-Eet" id="q3T-xg-ie7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -21,13 +23,31 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dGU-zY-H8h">
-                    <rect key="frame" x="0.0" y="59" width="393" height="56"/>
-                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="QQq-es-Cq3"/>
-                    </connections>
-                </searchBar>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RvR-2C-eFQ">
+                    <rect key="frame" x="8" y="59" width="377" height="56"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="dGU-zY-H8h">
+                            <rect key="frame" x="0.0" y="0.0" width="337" height="56"/>
+                            <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="QQq-es-Cq3"/>
+                            </connections>
+                        </searchBar>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixj-f2-yR2" userLabel="Filter Button">
+                            <rect key="frame" x="337" y="0.0" width="40" height="56"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="efe-b3-edV"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="slider.horizontal.3" catalog="system">
+                                <color key="baseForegroundColor" name="AccentColor"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="filterButtonPressed:" destination="-1" eventType="touchUpInside" id="3Bf-Sb-EQG"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tgl-4L-Eet">
                     <rect key="frame" x="0.0" y="115" width="393" height="703"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -37,18 +57,22 @@
             <viewLayoutGuide key="safeArea" id="l9H-zr-Nwr"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="dGU-zY-H8h" firstAttribute="leading" secondItem="l9H-zr-Nwr" secondAttribute="leading" id="1lk-cv-OhO"/>
+                <constraint firstItem="RvR-2C-eFQ" firstAttribute="top" secondItem="l9H-zr-Nwr" secondAttribute="top" id="1kL-bk-af1"/>
                 <constraint firstItem="Tgl-4L-Eet" firstAttribute="leading" secondItem="l9H-zr-Nwr" secondAttribute="leading" id="9Wu-n9-Xwr"/>
-                <constraint firstAttribute="trailing" secondItem="dGU-zY-H8h" secondAttribute="trailing" id="B6g-5w-aPJ"/>
-                <constraint firstItem="Tgl-4L-Eet" firstAttribute="top" secondItem="dGU-zY-H8h" secondAttribute="bottom" id="FbH-NX-Fcy"/>
                 <constraint firstItem="l9H-zr-Nwr" firstAttribute="trailing" secondItem="Tgl-4L-Eet" secondAttribute="trailing" id="OOV-jn-sTz"/>
+                <constraint firstAttribute="trailing" secondItem="RvR-2C-eFQ" secondAttribute="trailing" constant="8" id="PUY-KW-iNB"/>
+                <constraint firstItem="RvR-2C-eFQ" firstAttribute="leading" secondItem="l9H-zr-Nwr" secondAttribute="leading" constant="8" id="Phl-in-Mcc"/>
                 <constraint firstItem="l9H-zr-Nwr" firstAttribute="bottom" secondItem="Tgl-4L-Eet" secondAttribute="bottom" id="Qy1-Oi-UEU"/>
-                <constraint firstItem="dGU-zY-H8h" firstAttribute="top" secondItem="l9H-zr-Nwr" secondAttribute="top" id="r88-0W-7KL"/>
+                <constraint firstItem="Tgl-4L-Eet" firstAttribute="top" secondItem="RvR-2C-eFQ" secondAttribute="bottom" id="g8V-3X-haw"/>
             </constraints>
             <point key="canvasLocation" x="129.00763358778624" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
+        <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

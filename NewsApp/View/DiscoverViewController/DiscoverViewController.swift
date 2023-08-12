@@ -11,8 +11,9 @@ final class DiscoverViewController: BaseNewsViewController {
     
     static let identifier = "DiscoverViewController"
 
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak private var searchBar: UISearchBar!
+    @IBOutlet weak private var filterButton: UIButton!
+    @IBOutlet weak private var tableView: UITableView!
     
     private var discoverViewModel: DiscoverViewModel {
         return (viewModel as? DiscoverViewModel) ?? DiscoverViewModel()
@@ -23,6 +24,9 @@ final class DiscoverViewController: BaseNewsViewController {
         viewModel = DiscoverViewModel()
     }
 
+    @IBAction func filterButtonPressed(_ sender: Any) {
+    }
+    
     override func setupTableView() {
         super.setupTableView()
         view.backgroundColor = .systemBackground
@@ -55,6 +59,7 @@ final class DiscoverViewController: BaseNewsViewController {
     }
     
     private func endTyping() {
+        filterButton.isHidden = false
         searchBar.showsCancelButton = false
         searchBar.text = nil
         view.endEditing(true)
@@ -85,6 +90,7 @@ extension DiscoverViewController {
             self?.reloadTable()
         }
     }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         indexPath.section == 0 ? NewsItemCell.height : LoadingCell.height
     }
@@ -94,6 +100,7 @@ extension DiscoverViewController {
 extension DiscoverViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = true
+        filterButton.isHidden = true
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
