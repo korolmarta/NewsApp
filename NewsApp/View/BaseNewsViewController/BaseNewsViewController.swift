@@ -74,7 +74,9 @@ extension BaseNewsViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
 
         if let url = viewModel.getWebViewURL(forIndex: indexPath.row) {
-            
+            let webView = WebViewController()
+            webView.webUrl = url
+            navigationController?.pushViewController(webView, animated: true)
         } else {
             showAlert(
                 title: "Ooops..",
