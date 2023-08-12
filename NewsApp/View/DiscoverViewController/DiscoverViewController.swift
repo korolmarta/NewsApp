@@ -77,7 +77,7 @@ extension DiscoverViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0: return discoverViewModel.rowCount
-        case 1: return 1
+        case 1: return discoverViewModel.isLoading ? 1 : 0
         default: return 0
         }
     }
