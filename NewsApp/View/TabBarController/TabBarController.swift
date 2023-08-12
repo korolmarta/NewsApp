@@ -14,6 +14,11 @@ final class TabBarController: UITabBarController {
         return UITabBarItem(title: "Discover", image: image, tag: 0)
     }
 
+    var favouriteTabItem: UITabBarItem {
+        let image = UIImage(systemName: "bookmark.square")
+        return UITabBarItem(title: "Favorite", image: image, tag: 1)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
@@ -30,8 +35,10 @@ final class TabBarController: UITabBarController {
     private func createTabs() {
         let discoverVC = DiscoverViewController(nibName: DiscoverViewController.identifier, bundle: nil)
         discoverVC.tabBarItem = discoverTabItem
+        let favouriteVC = SavedNewsViewController()
+        favouriteVC.tabBarItem = favouriteTabItem
 
-        let controllerArray = [discoverVC]
+        let controllerArray = [discoverVC, favouriteVC]
         viewControllers = controllerArray.map{ UINavigationController(rootViewController: $0) }
     }
 }

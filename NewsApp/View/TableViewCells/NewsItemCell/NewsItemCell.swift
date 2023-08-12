@@ -45,6 +45,19 @@ final class NewsItemCell: UITableViewCell {
     }
 
     @IBAction private func saveButtonPressed(_ sender: Any) {
+        if viewModel.saved {
+            viewModel.deleteArticle() { [weak self] success in
+                guard success, let self = self else { return }
+                self.saveButton.setImage(self.bookmarkImage, for: .normal)
+                self.refreshUICallback?()
+            }
+        } else {
+            viewModel.saveArticle() { [weak self] success in
+                guard success, let self = self else { return }
+                self.saveButton.setImage(self.bookmarkFilledImage, for: .normal)
+                self.refreshUICallback?()
+            }
+        }
     }
     
     private func setupImage(withUrl url: String?) {
